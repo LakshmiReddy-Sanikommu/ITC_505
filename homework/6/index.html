@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holy Grail Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="HolyGrail">
+     <header>
+        <h1>Lab 6 - Do Something</h1>
+     </header>
+     <div class="HolyGrail-body">
+        <main class="HolyGrail-content">
+            <h2 id="home">Home</h2>
+            <p>
+                This is my Lab-6 assignment of ITC 505
+            </p>
+
+            <h2 id="holygrail">Holy Grail</h2>
+            <p>The holy grail is a web page layout which has multiple equal-height columns that are defined with style sheets. It is commonly desired and implemented, but for many years, the various ways in which it could be implemented with available technologies all had drawbacks. Because of this, finding an optimal implementation was likened to searching for the elusive Holy Grail.
+
+                In the late 1900s, the limitations of CSS and HTML, the desirability of semantically meaningful pages that rank well in search engines, and the deficiencies of various browsers combined historically to create a situation in which there was no way to create this type of layout that would be considered totally correct. As the underlying technologies did not provide a proper solution, web designers found various ways to work around the limitations. Common workarounds included changes in page structure, the addition of graphics, scripting, and the creative use of CSS. These methods were imperfect, inconvenient, and considered by some to be abuse of the web standards and their intent.
+                
+                More recent web standards have provided much more complete and robust solutions for implementing this layout. In particular, the CSS Flexible Box Layout and CSS Grid Layout modules have both provided full solutions.
+            </p>
+
+            <h2 id="JS">Javascript Thingy</h2>
+
+            <h3>Factorial Calculator</h3>
+            <p>Enter a number to calculate its factorial:</p>
+            <input type="number" id="inputNumber" placeholder="Enter a number">
+            <button id="calculateButton">Calculate Factorial</button>
+            <p>Factorial Result:</p>
+            <div id="output"></div>
+            <p id="error"></p>
+
+            <button class="HolyGrail-content-button" id="changeColorButton">Change Color</button>
+
+            <p>Press the change color button to change the color of the background of the Content Section</p>
+        </main>
+        <nav class="HolyGrail-nav">
+            <h1 style="color: coral;">Navigation</h1>
+            <a href="#home">Home</a><br>
+            <a href="#holygrail">Holy grail</a><br>
+            <a href="#JS">Javascript</a><br>
+            <a href="#addendum">Addendum</a><br>
+        </nav>
+        <aside class="HolyGrail-ads">
+            <h2 style="color: coral;">Advertisements</h2>
+            <p class="PN">PlayStation PS5™ Console – Call of Duty® Modern Warfare® II Bundle</p>
+            <a href="https://www.amazon.com/PlayStation-PS5TM-Console-Modern-Warfare%C2%AE-5/dp/B0C4Q7L3WF/ref=sr_1_2?crid=1XD6D87AOD7V5&keywords=ps5+console&qid=1698964833&sprefix=ps%2Caps%2C200&sr=8-2&ufe=app_do%3Aamzn1.fos.2b70bf2b-6730-4ccf-ab97-eb60747b8daf">
+                <img src="https://m.media-amazon.com/images/I/71ZSryzYjfL._SL1500_.jpg" alt="Product Image">
+            </a>
+            <p>From $613.00</p>
+
+            <p class="PN">Xbox Series X</p>
+            <a href="https://www.amazon.com/Xbox-X/dp/B08H75RTZ8/ref=sr_1_4?crid=15FSLC6558AQI&keywords=xbox&qid=1698965231&sprefix=xbox%2Caps%2C137&sr=8-4&ufe=app_do%3Aamzn1.fos.c3015c4a-46bb-44b9-81a4-dc28e6d374b3&th=1">
+                <img src="https://m.media-amazon.com/images/I/51ojzJk77qL._SL1500_.jpg" alt="Product Image">
+            </a>
+            <p>From $484.49</p>
+        </aside>
+    </div>
+    
+    <footer>
+        <h1 id="addendum">Addendum</h1>
+        <p>The JavaScript code I wrote is a simple script that changes the background color of the content section when a button with the id `changeColorButton` is clicked. It generates a random color and sets it as the background color of the content section, which is selected with the class name `HolyGrail-content`.</p>
+        <p>I also added a text box and a button to calculating the factorial of a number and displaying the result or an error message based on user input.</p>
+        <p>Here's a brief overview of how this code works and the problem it solves:</p>
+        <p>It starts by getting a reference to the button element with the id `changeColorButton` and the content section with the class name `HolyGrail-content` using `document.getElementById` and `document.querySelector`, respectively.</p>
+        <p>It adds an event listener to the button element, which listens for a "click" event.</p>
+        <p>When the button is clicked, the event listener function is executed. Inside this function:</p>
+        <Ul>- It generates a random color by creating a 6-digit hexadecimal color code (e.g., "#RRGGBB") using the `Math.random()` function and bitwise operations.</Ul>
+        <Ul>- It sets the `backgroundColor` property of the content section (`content`) to the generated random color. This changes the background color of the content section to the new random color.</Ul>
+        <p>I defined a calculateFactorial function that takes an input number as a parameter.
+            It checks whether the input number is negative and returns an error message if it is, as factorial is not defined for negative numbers.
+            If the input number is 0, it returns 1, as the factorial of 0 is defined as 1.
+            For positive integers, it uses a for loop to calculate the factorial iteratively and returns the result.
+        </p>
+        <p>
+            I created two separate functions, displayFactorialResult and displayError, to handle the display of results and error messages, respectively.
+displayFactorialResult takes a result as input and sets the innerHTML of an HTML element with the ID "output" to display the result.
+displayError takes an error message as input and sets the innerHTML of an HTML element with the ID "error" to display the error message.
+        </p>
+        <p>So, the problem this code solves is allowing the user to click a button to change the background color of the content section to a random color. This can be a simple way to add interactivity and visual interest to a web page. I also solved factoroial by organizing the code into functions to calculate the factorial, display results, and handle error messages, and then implemented an event listener to control the flow of the program when the button is clicked.</p>
+    </footer>
+        <script src="lab6.js"></script>
+</body>
+
+</html>
